@@ -3,11 +3,14 @@
     --accentcolor2: #FB3B64;
     --accentcolor3: #55DFB4;
     --accentcolor4: #07ACE6;
+    --accentcolor5: #EB476E;
     --bgrcolor1: #fff;
     --bgrcolor2: #f7f7f7;
+    --btnclickshadow: rgba(0, 0, 0, .5);
     --fontcolor1: #000;
     --fontcolor2: #A5A5A5;
     --fontcolor3: #fff;
+    --fontcolor4: #13253B;
     --fontfamily1: 'Raleway', sans-serif;
     --fontfamily2: 'Open Sans', sans-serif;
 }
@@ -120,7 +123,7 @@ header .content {
         transition: 0.2s;
     }
     .header__button:active {
-        box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, .5);
+        box-shadow: inset 0 0 5px 3px var(--btnclickshadow);
     }
 /***********************************************/
 section {
@@ -131,11 +134,15 @@ section .container {
     font-family: var(--fontfamily1);
 }
 /**********************/
-.section__title {
+.section__title,
+.section__title--b {
     padding-top: 106px;
     margin-bottom: 100px;
     font-size: 2.25rem;
     text-align: center;
+}
+.section__title--b {
+    margin-bottom: 70px;
 }
 .section__icons-block {
     width: 100%;
@@ -324,4 +331,122 @@ article {
     left: 24px;
     z-index: 0;
 }
+/***********************************************/
+.section__pricing-content {
+    padding-bottom: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section__pricing-content__pricing-block,
+.section__pricing-content__pricing-block--b,
+.section__pricing-content__pricing-block--c {
+    width: 372px;
+    height: 461px;
+    padding: 38px 38px 81px 38px;
+    border-radius: 18px;
+    border: 1px solid var(--accentcolor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.section__pricing-content__pricing-block--b {
+    border: 1px solid var(--accentcolor4);
+    box-shadow: 5px 10px 27px #07ACE649;
+    transform: scale(1.09, 1.09);
+}
+.section__pricing-content__pricing-block--c {
+    border: 1px solid var(--accentcolor3);
+}
+.pricing-block__header {
+    text-align: center;
+}
+.pricing-block__header__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--fontcolor4);
+    margin-bottom: 20px;
+}
+.pricing-block__header__price,
+.pricing-block__header__price--b,
+.pricing-block__header__price--c {
+    font-family: var(--fontfamily2);
+    font-size: 2.88rem;
+    font-weight: 300;
+    color: var(--accentcolor2);
+}
+.pricing-block__header__price--b {
+    color: var(--accentcolor4);
+}
+.pricing-block__header__price--c {
+    color: var(--accentcolor3);
+}
+.pricing-block__header__limitation {
+    margin-top: 17px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--fontcolor4);
+}
+.pricing-block__descript {
+    display: flex;
+    flex-direction: column;
+}
+.pricing-block__descript__row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.row__checkbox {
+    margin-right: 10px;
+}
+.row__text {
+    font-family: var(--fontfamily2);
+    font-size: 0.88rem;
+}
+.pricing-block__button,
+.pricing-block__button--b,
+.pricing-block__button--c {
+    width: 150px;
+    height: 50px;
+    background: var(--accentcolor5);
+    border-radius: 23px;
+    font-family: var(--fontfamily2);
+    font-size: 0.81rem;
+    font-weight: 700;
+    color: var(--fontcolor3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: -25px;
+}
+.pricing-block__button--b {
+    background: var(--accentcolor4);
+}
+.pricing-block__button--c {
+    background: var(--accentcolor3);
+}
+    .pricing-block__button:hover,
+    .pricing-block__button--b:hover,
+    .pricing-block__button--c:hover {
+        color: var(--accentcolor5);
+        background: var(--fontcolor3);
+        border: 2px solid var(--accentcolor5);
+        transition: 0.2s;
+    }
+    .pricing-block__button--b:hover {
+        color: var(--accentcolor4);
+        border: 2px solid var(--accentcolor4);
+    }
+    .pricing-block__button--c:hover {
+        color: var(--accentcolor3);
+        border: 2px solid var(--accentcolor3);
+    }
+    .pricing-block__button:active,
+    .pricing-block__button--b:active,
+    .pricing-block__button--c:active {
+        box-shadow: inset 0 0 5px 3px var(--btnclickshadow);
+    }
 /***********************************************/
