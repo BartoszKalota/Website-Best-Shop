@@ -556,7 +556,7 @@ button[type="submit"] {
     width: 226px;
     height: 61px;
     background: var(--accentcolor1);
-    border: 2px solid var(--bgrcolor1);
+    border: 2px solid transparent;
     border-radius: 35px;
     box-shadow: 5px 10px 14px #07ACE629;
     font-size: 0.81rem;
@@ -574,6 +574,9 @@ button[type="submit"] {
         transition: 0.2s;
     }
     button[type="submit"]:active {
+        background: var(--bgrcolor1);
+        border: 2px solid var(--accentcolor1);
+        color: var(--accentcolor1);
         box-shadow: inset 0 0 5px 3px var(--btnclickshadow);
     }
     button:focus {
