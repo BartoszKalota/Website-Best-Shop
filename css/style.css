@@ -46,6 +46,7 @@ nav .container {
 .nav__logo {
     color: var(--accentcolor1);
     font-size: 2rem;
+    font-weight: 300;
     font-family: var(--fontfamily1);
 }
 .menu {
@@ -583,3 +584,27 @@ button[type="submit"] {
         outline: 1px dashed var(--accentcolor1);
     }
 /***********************************************/
+footer {
+    width: 100%;
+    background: var(--bgrcolor1);
+    box-shadow: 0 -5px 40px #00000029;
+}
+footer .container {
+    height: 89px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/**********************/
+.footer__logo {
+    font-size: 1.63rem;
+    margin-bottom: 7px;
+}
+small {
+    font-family: var(--fontfamily2);
+    font-size: 0.7rem;
+    color: var(--fontcolor2);
+}
+.footer__socials__facebook {
+    margin-left: 20px;
+}
