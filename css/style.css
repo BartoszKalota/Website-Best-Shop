@@ -117,7 +117,8 @@ header .content {
     font-weight: 700;
     color: var(--fontcolor3);
 }
-    .header__button:hover {
+    .header__button:hover,
+    .header__button:active {
         border: 2px solid var(--accentcolor1);
         color: var(--accentcolor1);
         background: var(--bgrcolor1);
@@ -431,17 +432,22 @@ article {
 }
     .pricing-block__button:hover,
     .pricing-block__button--b:hover,
-    .pricing-block__button--c:hover {
+    .pricing-block__button--c:hover,
+    .pricing-block__button:active,
+    .pricing-block__button--b:active,
+    .pricing-block__button--c:active {
         color: var(--accentcolor5);
         background: var(--fontcolor3);
         border: 2px solid var(--accentcolor5);
         transition: 0.2s;
     }
-    .pricing-block__button--b:hover {
+    .pricing-block__button--b:hover,
+    .pricing-block__button--b:active {
         color: var(--accentcolor4);
         border: 2px solid var(--accentcolor4);
     }
-    .pricing-block__button--c:hover {
+    .pricing-block__button--c:hover,
+    .pricing-block__button--c:active {
         color: var(--accentcolor3);
         border: 2px solid var(--accentcolor3);
     }
@@ -568,16 +574,14 @@ button[type="submit"] {
     justify-content: center;
     align-items: center;
 }
-    button[type="submit"]:hover {
+    button[type="submit"]:hover,
+    button[type="submit"]:active {
         background: var(--bgrcolor1);
         border: 2px solid var(--accentcolor1);
         color: var(--accentcolor1);
         transition: 0.2s;
     }
     button[type="submit"]:active {
-        background: var(--bgrcolor1);
-        border: 2px solid var(--accentcolor1);
-        color: var(--accentcolor1);
         box-shadow: inset 0 0 5px 3px var(--btnclickshadow);
     }
     button:focus {
