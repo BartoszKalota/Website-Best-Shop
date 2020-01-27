@@ -1,5 +1,5 @@
 {
-  "name": "kat_fer_w_07_rwd_sass",
+  "name": "website_best_shop",
   "version": "1.0.0",
   "description": "<img alt=\"Logo\" src=\"http://coderslab.pl/svg/logo-coderslab.svg\" width=\"400\">",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "jshint": "^2.11.0-rc1",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BartoszKalota/KAT_FER_W_07_RWD_SASS.git"
+    "url": "git+https://github.com/BartoszKalota/Website-Best-Shop.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BartoszKalota/KAT_FER_W_07_RWD_SASS/issues"
+    "url": "https://github.com/BartoszKalota/Website-Best-Shop/issues"
   },
-  "homepage": "https://github.com/BartoszKalota/KAT_FER_W_07_RWD_SASS#readme"
+  "homepage": "https://github.com/BartoszKalota/Website-Best-Shop#readme"
 }
