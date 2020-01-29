@@ -1,0 +1,9 @@
+.form-section {
+    width: $form-section-width;
+    margin-right: 15px;
+}
+
+form * {
+    font-family: $fontfamily2;
+    font-size: $form-font-size-standard;
+}

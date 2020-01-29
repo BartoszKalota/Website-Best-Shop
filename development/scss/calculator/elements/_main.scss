@@ -1,0 +1,10 @@
+main {
+    max-width: $main-container-width;
+    padding: $main-container-padding;
+    margin: 0 auto;
+}
+
+.container {    // Nie jest zagnieżdżony w main, bo dla main zastosowano @extend
+    display: flex;
+    justify-content: space-between;
+}

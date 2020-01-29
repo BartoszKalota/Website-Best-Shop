@@ -1,0 +1,22 @@
+input {
+    @extend %input-properties;
+}
+
+input::placeholder {
+    color: $placeholdercolor1;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: 0 0 5px 1px $shadowcolor1;
+}
+
+// Wyłączenie strzałek w inputach typu number - użycie strzałek z inputa zamiast cyfry z klawiatury sprawia, że JS szwankuje
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
