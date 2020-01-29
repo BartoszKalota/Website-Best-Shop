@@ -26,6 +26,8 @@
     z-index: 1;
     display: none;
 }
+@include dropdown-slide(normal);
+@include dropdown-slide(reverse);
 
 .set-package--menu-item {
     padding: $input-padding-standard;

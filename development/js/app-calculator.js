@@ -29,7 +29,7 @@ totalPrice.innerText = `$0`;
 
 // Domyślne ukrycie dropdowna
 dropdown.style.display = 'none';
-// Wybór pakietu (opcji)
+// Wstawienie wybranego pakietu (opcji) w pole select
 function provideSelectedPackage(event) {
     const viewOption = this.parentElement.parentElement.querySelector('#set-package__placeholder');
     viewOption.innerText = this.innerText;
@@ -40,15 +40,23 @@ function showOrHideDropdown(event) {
     const arrow = this.querySelector('#set-package__img');
     if ( dropdown.style.display === 'none' ) {
         dropdown.style.display = 'block';
+        dropdown.classList.remove('dropdown-slide-reverse');
+        dropdown.classList.add('dropdown-slide-normal');
         arrow.style.transform = 'rotate(180deg)';
+        arrow.style.transition = '0.4s';
         // Nadanie zdarzenia na opcje do wyboru
         menuItems.forEach(function(menuItem) {
             menuItem.addEventListener('click', provideSelectedPackage);
         });
     }
     else {
-        dropdown.style.display = 'none';
+        setTimeout(function() {
+            dropdown.style.display = 'none';
+        }, 500);
+        dropdown.classList.remove('dropdown-slide-normal');
+        dropdown.classList.add('dropdown-slide-reverse');
         arrow.style.transform = 'rotate(0deg)';
+        arrow.style.transition = '0.4s';
     }
 }
 packageSelect.addEventListener('click', showOrHideDropdown);
