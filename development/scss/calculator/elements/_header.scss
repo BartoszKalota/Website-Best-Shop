@@ -1,7 +1,11 @@
 header {
     @extend main;
-    margin-top: 93px;
+    margin-top: 52px;
     margin-bottom: 52px;
+
+    @include desktop {
+        margin-top: 93px;
+    }
 
     h1 {
         font-size: 2.25rem;

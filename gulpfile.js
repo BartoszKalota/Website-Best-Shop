@@ -13,7 +13,7 @@ gulp.task('sass', function() {
     return gulp.src('development/scss/main-calculator.scss')
         .pipe( sourcemaps.init() )
         .pipe( sass({
-            outputStyle: 'expanded',
+            outputStyle: 'compact',
             sourceComments: 'map'
         }).on('error', sass.logError) )
         .pipe( sourcemaps.write() )
