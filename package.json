@@ -1,0 +1,30 @@
+{
+  "name": "website_best_shop",
+  "version": "1.0.0",
+  "description": "<img alt=\"Logo\" src=\"http://coderslab.pl/svg/logo-coderslab.svg\" width=\"400\">",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "jshint": "^2.11.0-rc1",
+    "node-sass": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BartoszKalota/Website-Best-Shop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BartoszKalota/Website-Best-Shop/issues"
+  },
+  "homepage": "https://github.com/BartoszKalota/Website-Best-Shop#readme"
+}

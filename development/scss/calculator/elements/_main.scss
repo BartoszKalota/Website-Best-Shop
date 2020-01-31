@@ -1,0 +1,17 @@
+main {
+    max-width: $main-container-width;
+    padding: $main-container-padding;
+    margin: 0 auto;
+}
+
+.container {    // Nie jest zagnieżdżony w main, bo dla main zastosowano @extend
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,14 @@
+.form-section {
+    width: $form-section-width;
+    margin-bottom: 30px;
+
+    @include desktop {
+        margin-right: 15px; 
+        margin-bottom: 0;   
+    }
+}
+
+form * {
+    font-family: $fontfamily2;
+    font-size: $form-font-size-standard;
+}

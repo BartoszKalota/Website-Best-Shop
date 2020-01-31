@@ -1,0 +1,50 @@
+.accounting-checksection {
+    width: 125px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.rental-checksection {
+    @extend .accounting-checksection;
+    width: 210px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: $bgrcolor1;
+    border: 1px solid $checkboxcolor-border;
+    border-radius: $radius-small;
+    margin-right: 10px;
+    margin-bottom: 0;
+    transform: translateY(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"]:hover {
+    background: $bgrhovercolor1;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../assets/Checkmark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.accounting-text,
+.rental-text {
+    font-size: 0.75rem;
+    padding-top: 5px;
+}
