@@ -1,6 +1,6 @@
 .form-section {
     width: $form-section-width;
-    margin-bottom: 30px;
+    margin-bottom: $margin-bottom-standard;
 
     @include desktop {
         margin-right: 15px; 

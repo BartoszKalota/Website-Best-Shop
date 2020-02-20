@@ -3,6 +3,11 @@
     font-family: $fontfamily2;
     font-size: $calculate-font-size-standard;
     color: $fontcolor2;
+    margin-bottom: $margin-bottom-standard;
     display: flex;
     flex-direction: column;
+
+    @include desktop {
+        margin-bottom: 0;
+    }
 }
