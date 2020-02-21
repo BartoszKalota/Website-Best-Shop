@@ -8,7 +8,8 @@ One-page website as the part of the Coders Lab course.
 Project in progress. I will systematically add some features during the Coders Lab course.
 
 # Technologies
-* JS (ES5) (only for 'Pricing calculator' feature, so far)
+* JS (ES5)
+* SASS
 * HTML and CSS
 * Fonts:
     * OpenSans
