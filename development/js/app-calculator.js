@@ -29,14 +29,8 @@ totalPrice.innerText = `$0`;
 
 // Domyślne ukrycie dropdowna
 dropdown.style.display = 'none';
-// Wstawienie wybranego pakietu (opcji) w pole select
-function provideSelectedPackage(event) {
-    const viewOption = this.parentElement.parentElement.querySelector('#set-package__placeholder');
-    viewOption.innerText = this.innerText;
-    viewOption.style.color = '#222';
-}
 // Pokazanie/Ukrycie dropdowna
-function showOrHideDropdown(event) {
+packageSelect.addEventListener('click', function(e) {
     const arrow = this.querySelector('#set-package__img');
     if ( dropdown.style.display === 'none' ) {
         dropdown.style.display = 'block';
@@ -46,7 +40,12 @@ function showOrHideDropdown(event) {
         arrow.style.transition = '0.4s';
         // Nadanie zdarzenia na opcje do wyboru
         menuItems.forEach(function(menuItem) {
-            menuItem.addEventListener('click', provideSelectedPackage);
+            // Wstawienie wybranego pakietu (opcji) w pole select
+            menuItem.addEventListener('click', function(e) {
+                const viewOption = this.parentElement.parentElement.querySelector('#set-package__placeholder');
+                viewOption.innerText = this.innerText;
+                viewOption.style.color = '#222';
+            });
         });
     }
     else {
@@ -58,8 +57,7 @@ function showOrHideDropdown(event) {
         arrow.style.transform = 'rotate(0deg)';
         arrow.style.transition = '0.4s';
     }
-}
-packageSelect.addEventListener('click', showOrHideDropdown);
+});
 
 // Kalkulacja
 
@@ -69,6 +67,16 @@ divOrders.style.display = 'none';
 divPackage.style.display = 'none';
 divAccounting.style.display = 'none';
 divTerminal.style.display = 'none';
+// Uwzględnienie inputa z ilością produktów
+prodquantInput.addEventListener('keyup', function(e) {
+    const self = this;
+    calculateInput(divProducts, 0.5, prodCalc, prodSum, self);
+});
+// Uwzględnienie inputa z ilością zamówień
+ordersinmonthInput.addEventListener('keyup', function(e) {
+    const self = this;
+    calculateInput(divOrders, 0.25, ordCalc, ordSum, self);
+});
 // Kalkulacja inputów
 function calculateInput(divType, priceValue, calcType, sumType, self) {
     if ( self.value !== '' ) {
@@ -90,35 +98,30 @@ function calculateInput(divType, priceValue, calcType, sumType, self) {
     }
     showTotal();
 }
-// Uwzględnienie inputa z ilością produktów
-function calculateProducts(event) {
-    const self = this;
-    calculateInput(divProducts, 0.5, prodCalc, prodSum, self);
-}
-prodquantInput.addEventListener('keyup', calculateProducts);
-// Uwzględnienie inputa z ilością zamówień
-function calculateOrders(event) {
-    const self = this;
-    calculateInput(divOrders, 0.25, ordCalc, ordSum, self);
-}
-ordersinmonthInput.addEventListener('keyup', calculateOrders);
-
 // Kalkulacja pakietu z dropdowna
-function calculatePackage(event) {
-    divPackage.style.display = 'grid';
-    
-    const viewOption = this.innerText;
-    packCalc.innerText = viewOption;
-
-    const sum = parseInt( this.dataset.price );
-    packSum.innerText = `$${sum}`;
-
-    showTotal();
-}
 menuItems.forEach(function(menuItem) {
-    menuItem.addEventListener('click', calculatePackage);
-});
+    menuItem.addEventListener('click', function(e) {
+        divPackage.style.display = 'grid';
+    
+        const viewOption = this.innerText;
+        packCalc.innerText = viewOption;
 
+        const sum = parseInt( this.dataset.price );
+        packSum.innerText = `$${sum}`;
+
+        showTotal();
+    });
+});
+// Uwzględnienie checkboxa accounting
+accountingCheckbox.addEventListener('change', function(e) {
+    const self = this;
+    calculateCheckbox(divAccounting, accSum, self);
+});
+// Uwzględnienie checkboxa terminal
+terminalCheckbox.addEventListener('change', function(e) {
+    const self = this;
+    calculateCheckbox(divTerminal, termSum, self);
+});
 // Kalkulacja checkboxów
 function calculateCheckbox(divType, sumType, self) {
     if ( self.checked === true ) {
@@ -133,18 +136,6 @@ function calculateCheckbox(divType, sumType, self) {
     }
     showTotal();
 }
-// Uwzględnienie checkboxa accounting
-function handleAccountingService(event) {
-    const self = this;
-    calculateCheckbox(divAccounting, accSum, self);
-}
-accountingCheckbox.addEventListener('change', handleAccountingService);
-// Uwzględnienie checkboxa terminal
-function handleTerminalService(event) {
-    const self = this;
-    calculateCheckbox(divTerminal, termSum, self);
-}
-terminalCheckbox.addEventListener('change', handleTerminalService);
 
 // Suma
 function showTotal() {

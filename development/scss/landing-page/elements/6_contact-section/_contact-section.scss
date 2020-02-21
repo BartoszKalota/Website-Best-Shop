@@ -1,0 +1,44 @@
+#section5 .container {
+    width: 950px;
+    padding: 147px 0 59px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-block {
+    font-family: $fontfamily2;
+}
+
+.contact-block__title {
+    font-family: $fontfamily1;
+    font-size: 3.06rem;
+    margin-bottom: 22px;
+}
+
+.contact-block__text {
+    margin-bottom: 42px;
+}
+
+.contact-block__addresses {
+    display: flex;
+}
+
+.contact-block__addresses__phone-block {
+    display: flex;
+    align-items: center;
+}
+
+.contact-block__addresses__email-block {
+    @extend .contact-block__addresses__phone-block;
+    margin-right: 24px;
+}
+
+.email-block__email {
+    font-weight: 600;
+    color: $fontcolor2;
+    margin-left: 10px;
+}
+
+.phone-block__phone {
+    @extend .email-block__email;
+}

@@ -1,0 +1,85 @@
+.section__pricing-content {
+    padding-bottom: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__pricing-content__pricing-block {
+    width: 372px;
+    height: 461px;
+    padding: 38px 38px 81px 38px;
+    border-radius: 18px;
+    border: 1px solid $accentcolor2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.section__pricing-content__pricing-block--b {
+    @extend .section__pricing-content__pricing-block;
+    border: 1px solid $accentcolor4;
+    box-shadow: 5px 10px 27px $pricingbox;
+    transform: scale(1.09, 1.09);
+}
+
+.section__pricing-content__pricing-block--c {
+    @extend .section__pricing-content__pricing-block;
+    border: 1px solid $accentcolor3;
+}
+
+.pricing-block__header {
+    text-align: center;
+}
+
+.pricing-block__header__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: $fontcolor4;
+    margin-bottom: 20px;
+}
+
+.pricing-block__header__price {
+    font-family: $fontfamily2;
+    font-size: 2.88rem;
+    font-weight: 300;
+    color: $accentcolor2;
+}
+
+.pricing-block__header__price--b {
+    @extend .pricing-block__header__price;
+    color: $accentcolor4;
+}
+
+.pricing-block__header__price--c {
+    @extend .pricing-block__header__price;
+    color: $accentcolor3;
+}
+
+.pricing-block__header__limitation {
+    margin-top: 17px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: $fontcolor4;
+}
+
+.pricing-block__descript {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-block__descript__row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.row__checkbox {
+    margin-right: 10px;
+}
+
+.row__text {
+    font-family: $fontfamily2;
+    font-size: 0.88rem;
+}

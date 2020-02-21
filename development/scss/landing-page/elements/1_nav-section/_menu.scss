@@ -1,0 +1,27 @@
+.menu {
+    font-family: $fontfamily2;
+    font-size: 0.7rem;
+    font-weight: 700;
+    position: relative;
+    display: flex;
+}
+
+.menu__item {
+    margin-left: 70px;
+    text-transform: uppercase;
+    padding: 28px 3px;
+}
+
+.menu__link {
+    color: $fontcolor2;
+    padding: 28px 13px;
+
+    &:hover {
+        color: $fontcolor1;
+        transition: 0.2s;
+    }
+}
+
+.menu__link--selected {
+    color: $fontcolor1;
+}
