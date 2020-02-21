@@ -1,0 +1,27 @@
+footer {
+    width: 100%;
+    background: $bgrcolor1;
+    box-shadow: 0 -5px 40px $navshadow;
+
+    .container {
+        height: 89px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer__logo {
+    font-size: 1.63rem;
+    margin-bottom: 7px;
+}
+
+small {
+    font-family: $fontfamily2;
+    font-size: 0.7rem;
+    color: $fontcolor2;
+}
+
+.footer__socials__facebook {
+    margin-left: 20px;
+}

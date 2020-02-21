@@ -1,0 +1,20 @@
+@import './generic/supplemental-reset';
+
+@import './landing-page/settings/variables';
+@import './landing-page/settings/mixins-media';
+
+@import './landing-page/elements/base';
+
+@import './landing-page/elements/1_nav-section/nav-section';
+@import './landing-page/elements/1_nav-section/menu';
+@import './landing-page/elements/1_nav-section/extensions';
+@import './landing-page/elements/2_header-section/header-section';
+@import './landing-page/elements/2_header-section/header-btn';
+@import './landing-page/elements/3_whyus-section/whyus-section';
+@import './landing-page/elements/3_whyus-section/icons-blocks';
+@import './landing-page/elements/4_benefits-section/benefits-section';
+@import './landing-page/elements/5_prices-section/prices-section';
+@import './landing-page/elements/5_prices-section/prices-btns';
+@import './landing-page/elements/6_contact-section/contact-section';
+@import './landing-page/elements/6_contact-section/form';
+@import './landing-page/elements/7_footer/footer';

@@ -1,0 +1,106 @@
+.contact-form {
+    width: 440px;
+    font-family: $fontfamily2;
+    display: flex;
+    flex-direction: column;
+}
+
+label[for="name"],
+label[for="email"] {
+    font-size: 0.69rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: $accentcolor1;
+    margin-bottom: 18px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid $inputborder;
+    color: $fontcolor5;
+    padding: 5px 2px;
+    margin-bottom: 42px;
+}
+
+input[type="email"] {
+    margin-bottom: 30px;
+}
+
+input:focus {
+    outline: 0;
+    box-shadow: 0 0 5px 1px $accentcolor1;
+}
+
+.checkbox {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: $bgrcolor1;
+    border: 1px solid $inputborder;
+    border-radius: 4px;
+    margin-right: 10px;
+    transform: translateY(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:checked::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-image: url('../assets/Checkmark.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.agrmnt-text {
+    width: 92%;
+    font-size: 0.75rem;
+    line-height: 1.06rem;
+    color: $fontcolor5;
+}
+
+button[type="submit"] {
+    width: 226px;
+    height: 61px;
+    background: $accentcolor1;
+    border: 2px solid transparent;
+    border-radius: 35px;
+    box-shadow: 5px 10px 14px $sendbtn;
+    font-size: 0.81rem;
+    font-weight: 700;
+    color: $fontcolor3;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+
+    &:hover,
+    &:active {
+        background: $bgrcolor1;
+        border: 2px solid $accentcolor1;
+        color: $accentcolor1;
+        transition: 0.2s;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 5px 3px $btnclickshadow;
+    }
+}
+
+button:focus {
+    outline: 1px dashed $accentcolor1;
+}

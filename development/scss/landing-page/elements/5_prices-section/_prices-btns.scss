@@ -1,0 +1,56 @@
+.pricing-block__button,
+.pricing-block__button--b,
+.pricing-block__button--c {
+    width: 150px;
+    height: 50px;
+    background: $accentcolor5;
+    border-radius: 23px;
+    font-family: $fontfamily2;
+    font-size: 0.81rem;
+    font-weight: 700;
+    color: $fontcolor3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 75px);
+    bottom: -25px;
+}
+
+.pricing-block__button--b {
+    background: $accentcolor4;
+}
+
+.pricing-block__button--c {
+    background: $accentcolor3;
+}
+
+.pricing-block__button:hover,
+.pricing-block__button--b:hover,
+.pricing-block__button--c:hover,
+.pricing-block__button:active,
+.pricing-block__button--b:active,
+.pricing-block__button--c:active {
+    color: $accentcolor5;
+    background: $fontcolor3;
+    border: 2px solid $accentcolor5;
+    transition: 0.2s;
+}
+
+.pricing-block__button--b:hover,
+.pricing-block__button--b:active {
+    color: $accentcolor4;
+    border: 2px solid $accentcolor4;
+}
+
+.pricing-block__button--c:hover,
+.pricing-block__button--c:active {
+    color: $accentcolor3;
+    border: 2px solid $accentcolor3;
+}
+
+.pricing-block__button:active,
+.pricing-block__button--b:active,
+.pricing-block__button--c:active {
+    box-shadow: inset 0 0 5px 3px $btnclickshadow;
+}
