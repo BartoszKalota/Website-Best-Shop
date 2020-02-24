@@ -23,9 +23,14 @@ const section1 = document.getElementById('section1');
 const section2 = document.getElementById('section2');
 const section3 = document.getElementById('section3');
 const section4 = document.getElementById('section4');
-const startOfSection3 = section1.offsetHeight + section2.offsetHeight;
-const startOfSection4 = startOfSection3 + section3.offsetHeight;
-const startOfSection5 = startOfSection4 + section4.offsetHeight;
+let startOfSection3 = section1.offsetHeight + section2.offsetHeight;
+let startOfSection4 = startOfSection3 + section3.offsetHeight;
+let startOfSection5 = startOfSection4 + section4.offsetHeight;
+window.addEventListener('resize', function(e) { // aktualizacja wysokości sekcji po zmianie trybu (np. na tabletowy)
+  startOfSection3 = section1.offsetHeight + section2.offsetHeight;
+  startOfSection4 = startOfSection3 + section3.offsetHeight;
+  startOfSection5 = startOfSection4 + section4.offsetHeight;
+});
 
 window.addEventListener('scroll', function(e) {
   if ( this.pageYOffset < startOfSection3 ) {

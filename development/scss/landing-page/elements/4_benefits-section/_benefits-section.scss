@@ -3,7 +3,7 @@ main {
 
     .container {
         max-width: $narrow-container-width;
-        padding: 105px 0;
+        padding: 105px 15px;
     }
 }
 
@@ -59,38 +59,46 @@ article {
     font-family: $fontfamily2;
     line-height: 1.4rem;
     margin-bottom: 50px;
-    position: relative;
- 
-    &::after {
-        content: '';
-        display: block;
-        width: 328px;
-        height: 3px;
-        background: $accentcolor2;
-        position: absolute;
-        left: 0;
-        bottom: -50px;
-    }
 }
 
-.article__text-block__text--b::after {
+.article__text-block__line,
+.article__text-block__line--b,
+.article__text-block__line--c {
+    max-width: 328px;
+    height: 3px;
+    background: $accentcolor2;
+}
+
+.article__text-block__line--b {
     background: $accentcolor1;
 }
 
-.article__text-block__text--c::after {
+.article__text-block__line--c {
     background: $accentcolor3;
 }
 
 .article__img-block {
     width: 470px;
     position: relative;
+    transform: scale(0.9);
+
+    @include desktop {
+        transform: scale(1.0);
+    }
 }
 
 .last-article__img-block {
     width: 440px;
     background: $accentcolor3;
     border-radius: 5px;
+    margin-left: 30px;
     position: relative;
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+        margin-left: 60px;
+    }
 }
 
 .article__img-block__img {
@@ -104,14 +112,22 @@ article {
     @extend .article__img-block__img;
     height: 328px;
     margin-top: 1px;
-    left: 32px;
+    left: 12px;
+
+    @include desktop {
+        left: 32px;
+    }
 }
 
 .last-article__img-block__img {
     height: 208px;
     position: absolute;
     top: 98px;
-    left: 62px;
+    transform: translateX(-20px) scale(0.9);
+
+    @include desktop {
+        transform: translateX(0px) scale(1.0);
+    }
 }
 
 .article__img-block__polygon {
@@ -122,7 +138,7 @@ article {
     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
     position: absolute;
     top: 20px;
-    right: 60px;
+    left: 210px;
     z-index: 0;
 }
 
@@ -133,6 +149,10 @@ article {
     border-radius: 50%;
     position: absolute;
     top: -13px;
-    left: 24px;
+    left: 4px;
     z-index: 0;
+
+    @include desktop {
+        left: 24px;
+    }
 }
