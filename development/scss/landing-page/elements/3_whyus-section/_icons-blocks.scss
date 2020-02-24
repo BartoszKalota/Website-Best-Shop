@@ -1,14 +1,25 @@
 .section__icons-block {
     width: 100%;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-evenly;
+    flex-direction: column;
+
+    @include tablet {
+        padding-bottom: 150px;
+        flex-direction: row;
+    }
 }
 
 .section__icons-block__icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 25px;
+
+    @include tablet {
+        margin-top: 0;
+    }
 }
 
 .icon__img-block {

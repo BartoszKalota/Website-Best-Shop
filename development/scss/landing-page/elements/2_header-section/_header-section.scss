@@ -3,14 +3,22 @@ header {
     background-image: url('../assets/Background.png');
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-size: 1200px;
+    background-size: 850px;
+
+    @include tablet {
+        background-size: 1200px;
+    }
 
     @include desktop {
         background-size: unset;
     }
 
     .container {
-        height: 800px;
+        height: 690px;
+
+        @include tablet {
+            height: 800px;
+        }
 
         @include desktop {
             height: 912px;
@@ -18,20 +26,38 @@ header {
     }
 
     .content {
-        padding-top: 208px;
+        padding-top: 190px;
         font-family: $fontfamily2;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include tablet {
+            padding-top: 208px;
+        }
     }
 }
 
 .header__title {
     font-family: $fontfamily1;
-    font-size: 3.1rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
+
+    @include tablet {
+        font-size: 3.1rem;
+    }
 }
 
 .header__title--second {
+    width: 270px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    text-align: center;
     margin-bottom: 38px;
+
+    @include tablet {
+        width: auto;
+        font-size: 1rem;
+        line-height: 1;
+    }
 }

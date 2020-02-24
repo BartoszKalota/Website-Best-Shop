@@ -1,11 +1,19 @@
 .header__button {
     display: block;
-    padding: 24px 157px;
+    width: 310px;
+    padding: 24px 0;
     background: $accentcolor1;
     border-radius: 40px;
     border: 2px solid $fontcolor3;
     font-weight: 700;
     color: $fontcolor3;
+    text-align: center;
+
+    @include tablet {
+        width: auto;
+        padding: 24px 157px;
+        text-align: unset;
+    }
 
     &:hover {
         border: 2px solid $accentcolor1;
