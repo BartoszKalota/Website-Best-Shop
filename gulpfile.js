@@ -10,7 +10,7 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('development/scss/main-calculator.scss')
+    return gulp.src('development/scss/main.scss')
         .pipe( sourcemaps.init() )
         .pipe( sass({
             outputStyle: 'compact',

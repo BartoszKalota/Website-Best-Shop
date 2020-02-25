@@ -2,9 +2,11 @@
 
 @import './landing-page/settings/variables';
 @import './landing-page/settings/mixins-media';
+@import './landing-page/settings/special-classes';
 
 @import './landing-page/elements/base';
 
+@import './landing-page/elements/1_nav-section/menu-trigger';
 @import './landing-page/elements/1_nav-section/nav-section';
 @import './landing-page/elements/1_nav-section/menu';
 @import './landing-page/elements/2_header-section/header-section';
