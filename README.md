@@ -5,7 +5,7 @@ A responsive one-page website as the part of the Coders Lab course.
 * Pricing calculator
 
 # Information
-* This project uses JavaScript in ES5 standard. The ES6 standard is used in projects including at least Workshop-4 in their titles.
+* This project uses JavaScript in ES5 standard. The ES6 standard is utilized in projects including at least Workshop-4 in their titles.
 * It is the result of two programming workshops during the Coders Lab course:
     * Workshop-1 (HTML and CSS)
     * Workshop-3 (Gulp, Sass, and RWD)
@@ -15,7 +15,7 @@ A responsive one-page website as the part of the Coders Lab course.
 * JS (ES5)
 * SASS, RWD
 * Gulp
-* HTML and CSS
+* HTML, CSS
 * Fonts:
     * OpenSans
     * Raleway
