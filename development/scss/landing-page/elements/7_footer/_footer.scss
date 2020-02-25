@@ -22,6 +22,9 @@ small {
     color: $fontcolor2;
 }
 
-.footer__socials__facebook {
+.footer__socials {
+    min-width: 72px;
     margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
 }

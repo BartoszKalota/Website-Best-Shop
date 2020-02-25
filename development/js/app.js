@@ -1,10 +1,16 @@
 // Obsługa przesuwanego podkreślenia w menu
 // ------------------------------------------------
+const mobileMaxWidth = 780;
+const hamburger = document.getElementById('menu-trigger');
 const menu = document.querySelector('nav .menu');
 const menuItems = menu.querySelectorAll('.menu__item');
 let defaultWidth = menuItems[0].offsetWidth; // aktualna szerokość pierwszego przycisku menu, na którym domyślnie znajduje się podkreślenie
-const customMarginLeft = getComputedStyle(menuItems[0]).marginLeft; // pobranie ustawionej wartości marginesu z pliku CSS
+let customMarginLeft = getComputedStyle(menuItems[0]).marginLeft; // pobranie ustawionej wartości marginesu z pliku CSS
 const accentColor1 = '#08A6E4';
+if ( window.innerWidth < mobileMaxWidth ) { // żeby pod przejściu z trybu mobilnego na tabletowy, podkreślenie uzyskało odpowiednią szerokość i pozycję
+  defaultWidth = 76;
+  customMarginLeft = '70px';
+}
 
 // Stworzenie podkreślenia
 const menuUnderline = document.createElement('div');
@@ -23,9 +29,14 @@ const section1 = document.getElementById('section1');
 const section2 = document.getElementById('section2');
 const section3 = document.getElementById('section3');
 const section4 = document.getElementById('section4');
-const startOfSection3 = section1.offsetHeight + section2.offsetHeight;
-const startOfSection4 = startOfSection3 + section3.offsetHeight;
-const startOfSection5 = startOfSection4 + section4.offsetHeight;
+let startOfSection3 = section1.offsetHeight + section2.offsetHeight;
+let startOfSection4 = startOfSection3 + section3.offsetHeight;
+let startOfSection5 = startOfSection4 + section4.offsetHeight;
+window.addEventListener('resize', function(e) { // aktualizacja wysokości sekcji po zmianie trybu (np. na tabletowy)
+  startOfSection3 = section1.offsetHeight + section2.offsetHeight;
+  startOfSection4 = startOfSection3 + section3.offsetHeight;
+  startOfSection5 = startOfSection4 + section4.offsetHeight;
+});
 
 window.addEventListener('scroll', function(e) {
   if ( this.pageYOffset < startOfSection3 ) {
@@ -61,5 +72,43 @@ function markTheButtonAsSelected(thisBtn) {
     menuItems[i].firstElementChild.classList.remove('menu__link--selected');
   }
   thisBtn.classList.add('menu__link--selected');
+}
+// ------------------------------------------------
+
+
+// Hamburger menu
+// ------------------------------------------------
+// Gdy zostanie wykryty tryb mobilny po przeładowaniu strony lub zmianie szerokości okna (dlatego wywołanie funkcji jest w 2 miejcach), wykona się odpowiednia instrukcja warunkowa wewnątrz funkcji
+handleHamburgerAndUnderlineVisibility();
+window.addEventListener('resize', function(e) {
+  handleHamburgerAndUnderlineVisibility();
+});
+
+function handleHamburgerAndUnderlineVisibility() {
+  if ( window.innerWidth < mobileMaxWidth ) {
+    hamburger.classList.remove('hidden');
+    menuUnderline.classList.add('hidden');
+    menu.classList.add('hidden'); // domyślne ukrycie menu w trybie mobilnym
+
+    // Pokazanie/Ukrycie menu
+    let counter = 0;
+    hamburger.addEventListener('click', function(e) {
+      const bars = this.firstElementChild;
+      if ( counter % 2 === 0 ) {
+        bars.className = 'fas fa-times'; // zmiana hamburgera na X
+        menu.classList.remove('hidden');
+      }
+      else {
+        bars.className = 'fas fa-bars'; // zmiana X na hamburgera
+        menu.classList.add('hidden');
+      }
+      counter++;
+    });
+  }
+  else {
+    hamburger.classList.add('hidden');
+    menuUnderline.classList.remove('hidden');
+    menu.classList.remove('hidden'); // domyślne pokazanie menu w trybach innych niż mobilny
+  }
 }
 // ------------------------------------------------

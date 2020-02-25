@@ -1,8 +1,16 @@
 #section5 .container {
-    width: 950px;
-    padding: 147px 0 59px 0;
+    max-width: 980px;
+    padding: 95px 15px 59px 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+        padding: 147px 15px 59px 15px;
+        align-items: stretch;
+        flex-direction: row;
+    }
 }
 
 .contact-block {
@@ -11,8 +19,13 @@
 
 .contact-block__title {
     font-family: $fontfamily1;
-    font-size: 3.06rem;
-    margin-bottom: 22px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+
+    @include tablet {
+        font-size: 3.06rem;
+        margin-bottom: 22px;
+    }
 }
 
 .contact-block__text {
@@ -21,6 +34,14 @@
 
 .contact-block__addresses {
     display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .contact-block__addresses__phone-block {
@@ -30,15 +51,18 @@
 
 .contact-block__addresses__email-block {
     @extend .contact-block__addresses__phone-block;
-    margin-right: 24px;
+    margin-right: 0;
+    margin-bottom: 10px;
+
+    @include tablet {
+        margin-right: 24px;
+        margin-bottom: 25px;
+    }
 }
 
-.email-block__email {
+.email-block__email,
+.phone-block__phone {
     font-weight: 600;
     color: $fontcolor2;
     margin-left: 10px;
-}
-
-.phone-block__phone {
-    @extend .email-block__email;
 }

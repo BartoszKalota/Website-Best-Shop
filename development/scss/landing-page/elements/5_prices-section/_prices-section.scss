@@ -3,18 +3,33 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+        flex-direction: row;
+    }
 }
 
 .section__pricing-content__pricing-block {
-    width: 372px;
-    height: 461px;
-    padding: 38px 38px 81px 38px;
+    max-width: 372px;
+    width: 95%;
+    min-width: 295px;
+    height: auto;
+    padding: 10px 10px 50px 10px;
     border-radius: 18px;
     border: 1px solid $accentcolor2;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     position: relative;
+
+    @include tablet {
+        width: 372px;
+        min-width: auto;
+        height: 461px;
+        padding: 38px 38px 81px 38px;
+        flex-direction: column;
+    }
 }
 
 .section__pricing-content__pricing-block--b {
@@ -22,6 +37,15 @@
     border: 1px solid $accentcolor4;
     box-shadow: 5px 10px 27px $pricingbox;
     transform: scale(1.09, 1.09);
+    margin: 65px 0;
+
+    h3 {
+        transform: scale(0.91);
+    }
+
+    @include tablet {
+        margin: 0 40px;
+    }
 }
 
 .section__pricing-content__pricing-block--c {
@@ -30,14 +54,28 @@
 }
 
 .pricing-block__header {
+    width: 50%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(10px);
+
+    @include tablet {
+        width: auto;
+        display: block;
+    }
 }
 
 .pricing-block__header__title {
     font-size: 1.25rem;
     font-weight: 800;
     color: $fontcolor4;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+
+    @include tablet {
+        margin-bottom: 20px;
+    }
 }
 
 .pricing-block__header__price {
@@ -58,15 +96,26 @@
 }
 
 .pricing-block__header__limitation {
-    margin-top: 17px;
+    margin-top: 10px;
     font-size: 0.75rem;
     font-weight: 800;
     color: $fontcolor4;
+
+    @include tablet {
+        margin-top: 17px;
+    }
 }
 
 .pricing-block__descript {
+    width: 50%;
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
+
+    @include tablet {
+        width: auto;
+        align-items: stretch;
+    }
 }
 
 .pricing-block__descript__row {

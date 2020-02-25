@@ -1,15 +1,20 @@
-# Website 'Best Shop' (Workshop-1)
-One-page website as the part of the Coders Lab course.
+# Website 'Best Shop' (Workshop-1 & 3)
+A responsive one-page website as the part of the Coders Lab course.
 
 # Features
 * Pricing calculator
 
 # Information
-Project in progress. I will systematically add some features during the Coders Lab course.
+* This project uses JavaScript in ES5 standard. The ES6 standard is used in projects including at least Workshop-4 in their titles.
+* It is the result of two programming workshops during the Coders Lab course:
+    * Workshop-1 (HTML and CSS)
+    * Workshop-3 (Gulp, Sass, and RWD)
+* RWD: mobile, tablet, and desktop modes.
 
 # Technologies
 * JS (ES5)
-* SASS
+* SASS, RWD
+* Gulp
 * HTML and CSS
 * Fonts:
     * OpenSans

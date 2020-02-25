@@ -1,8 +1,15 @@
 .contact-form {
-    width: 440px;
+    max-width: 440px;
     font-family: $fontfamily2;
+    margin-top: 55px;
+    margin-left: 0;
     display: flex;
     flex-direction: column;
+
+    @include tablet {
+        margin-top: 0;
+        margin-left: 50px;
+    }
 }
 
 label[for="name"],
