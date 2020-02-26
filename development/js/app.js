@@ -97,10 +97,18 @@ function handleHamburgerAndUnderlineVisibility() {
       if ( counter % 2 === 0 ) {
         bars.className = 'fas fa-times'; // zmiana hamburgera na X
         menu.classList.remove('hidden');
+        menu.classList.remove('menu-animation-reverse');
+        menu.classList.add('menu-animation-normal');
+        menu.style.transition = '0.3s';
       }
       else {
         bars.className = 'fas fa-bars'; // zmiana X na hamburgera
-        menu.classList.add('hidden');
+        setTimeout(function() {
+          menu.classList.add('hidden');
+        }, 300);
+        menu.classList.remove('menu-animation-normal');
+        menu.classList.add('menu-animation-reverse');
+        menu.style.transition = '0.3s';
       }
       counter++;
     });
@@ -108,6 +116,7 @@ function handleHamburgerAndUnderlineVisibility() {
   else {
     hamburger.classList.add('hidden');
     menuUnderline.classList.remove('hidden');
+    menu.classList.remove('menu-animation-reverse');
     menu.classList.remove('hidden'); // domyślne pokazanie menu w trybach innych niż mobilny
   }
 }

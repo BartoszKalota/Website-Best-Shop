@@ -36,6 +36,10 @@
     }
 }
 
+@include menu-animation(normal);
+
+@include menu-animation(reverse);
+
 .menu__item {
     margin-left: 0;
     text-transform: uppercase;
