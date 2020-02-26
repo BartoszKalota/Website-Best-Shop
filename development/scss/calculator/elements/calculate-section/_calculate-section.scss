@@ -1,5 +1,6 @@
 .calculate-section {
-    width: $calculate-section-width;
+    max-width: $calculate-section-width;
+    width: 100%;
     font-family: $fontfamily2;
     font-size: $calculate-font-size-standard;
     color: $fontcolor2;

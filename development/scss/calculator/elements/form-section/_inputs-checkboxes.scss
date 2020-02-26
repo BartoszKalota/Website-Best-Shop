@@ -19,7 +19,7 @@ input[type="checkbox"] {
     width: 24px;
     height: 24px;
     background: $bgrcolor1;
-    border: 1px solid $checkboxcolor-border;
+    border: 1px solid $accentcolor1;
     border-radius: $radius-small;
     margin-right: 10px;
     margin-bottom: 0;
@@ -27,10 +27,6 @@ input[type="checkbox"] {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-input[type="checkbox"]:hover {
-    background: $bgrhovercolor1;
 }
 
 input[type="checkbox"]:checked::after {

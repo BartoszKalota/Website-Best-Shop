@@ -1,5 +1,5 @@
 .form-section {
-    width: $form-section-width;
+    max-width: $form-section-width;
     margin-bottom: $margin-bottom-standard;
 
     @include desktop {
