@@ -8,7 +8,7 @@ A responsive one-page website as the part of the Coders Lab course.
 * This project uses JavaScript in ES5 standard. The ES6 standard is utilized in projects including at least Workshop-4 in their titles.
 * It is the result of two programming workshops during the Coders Lab course:
     * Workshop-1 (HTML and CSS)
-    * Workshop-3 (Gulp, Sass, and RWD)
+    * Workshop-3 (Gulp, SASS, and RWD)
 * RWD: mobile, tablet, and desktop modes.
 
 # Technologies
