@@ -1,0 +1,44 @@
+#set-package {
+    @extend %input-properties;
+    background: $bgrcolor1;
+    padding-right: 14px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#set-package__placeholder {
+    color: $placeholdercolor1;
+}
+
+#set-package--menu {
+    width: 100%;
+    list-style: none;
+    background: $bgrcolor1;
+    color: $fontcolor-set-package-menu;
+    border: 1px solid $accentcolor3;
+    border-radius: $radius-standard;
+    box-shadow: 0 3px 6px $shadowcolor2;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 1;
+    display: none;
+}
+@include dropdown-slide(normal);
+@include dropdown-slide(reverse);
+
+.set-package--menu-item {
+    padding: $input-padding-standard;
+}
+
+.set-package--menu-item:hover {
+    background: $bgrhovercolor1;
+}
+.set-package--menu-item:first-of-type:hover {
+    border-radius: 6px 6px 0 0;
+}
+.set-package--menu-item:last-of-type:hover {
+    border-radius: 0 0 6px 6px;
+}
