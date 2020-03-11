@@ -8,15 +8,15 @@ https://bartoszkalota.github.io/Website-Best-Shop/
 
 # Features
 * Pricing calculator
+* Responsive Web Design (RWD) modes:
+    * mobile (< 780px)
+    * tablet (780-999px)
+    * desktop (>= 1000px)
 * Smooth scrolling and animations
 * Movable menu underline
 
 # Information
 * This website uses JavaScript in ES5 standard. The ES6 standard is utilized in projects including at least Workshop-4 in their titles.
-* Responsive Web Design (RWD) modes:
-    * mobile (< 780px)
-    * tablet (780-999px)
-    * desktop (>= 1000px)
 * It is the result of two programming workshops during the Coders Lab course:
     * Workshop-1 (HTML and CSS)
     * Workshop-3 (Gulp, SASS, and RWD)
