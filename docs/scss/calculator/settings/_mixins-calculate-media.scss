@@ -1,7 +1,0 @@
-$desktop-width-calculate: 700px;
-
-@mixin desktop {
-    @media (min-width: #{$desktop-width-calculate}) {
-        @content;
-    }
-}
