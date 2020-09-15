@@ -10,7 +10,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "jshint": "^2.11.0-rc1",
-    "node-sass": "^4.13.1"
+    "node-sass": "^4.13.1",
+    "yargs-parser": "^20.0.0"
   },
   "devDependencies": {},
   "scripts": {
