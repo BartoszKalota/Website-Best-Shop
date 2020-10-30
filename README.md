@@ -1,5 +1,5 @@
 # Website 'Best Shop' (Workshop-1 & 3)
-A responsive one-page website (built with i.a.: JS (ES5), SASS, RWD) as the part of the Coders Lab course.
+A responsive one-page website (built with i.a.: JS (ES5), SCSS, RWD) as the part of the Coders Lab course.
 
 ![Project screenshot](/development/images/project_screen.jpg)
 
@@ -19,11 +19,11 @@ https://bartoszkalota.github.io/Website-Best-Shop/
 * This website uses JavaScript in ES5 standard. The ES6 standard is utilized in projects including at least Workshop-4 in their titles.
 * It is the result of two programming workshops during the Coders Lab course:
     * Workshop-1 (HTML and CSS)
-    * Workshop-3 (Gulp, SASS, and RWD)
+    * Workshop-3 (Gulp, SCSS, and RWD)
 
 # Technologies
 * JS (ES5)
-* SASS, RWD
+* SCSS, RWD
 * Gulp
 * HTML, CSS
 * Fonts:
