@@ -1,10 +1,11 @@
 # Website 'Best Shop' (Workshop-1 & 3)
 A responsive one-page website (built with i.a.: JS (ES5), SCSS, RWD) as the part of the Coders Lab course.
 
-![Project screenshot](/development/images/project_screen.jpg)
-
 # Live demo
 https://bartoszkalota.github.io/Website-Best-Shop/
+
+# Video demo
+[![Watch the video](./development/images/video-demo.jpg)](https://youtu.be/ehk79bd_64A)
 
 # Features
 * Pricing calculator
